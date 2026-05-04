@@ -19,20 +19,36 @@ Short summary on functionality and used technologies.
 
 ## Prerequisites
 
-> Any special pre-requisites?
+- Node.js `v22.21.0` (requires `>=22.14.0 <23.0.0`)
+- `@rushstack/heft` installed globally: `npm install -g @rushstack/heft`
+
+## Technology Stack
+
+| Technology              | Version  |
+| ----------------------- | -------- |
+| SharePoint Framework    | 1.22.2   |
+| Node.js                 | 22.21.0  |
+| TypeScript              | 5.8.3    |
+| React                   | 17.0.1   |
+| Fluent UI React         | 8.x      |
+| @pnp/sp                 | 4.12.0   |
+| @reduxjs/toolkit        | 2.5.1    |
+| react-redux             | 8.1.3    |
+| @rushstack/heft         | 1.1.2    |
+| ESLint                  | 8.57.1   |
 
 ## Solution
 
-| Solution    | Author(s)                                               |
-| ----------- | ------------------------------------------------------- |
-| folder name | Author details (name, company, twitter alias with link) |
+| Solution              | Author(s)                                               |
+| --------------------- | ------------------------------------------------------- |
+| roca-transit-breakage | Author details (name, company, twitter alias with link) |
 
 ## Version history
 
-| Version | Date             | Comments        |
-| ------- | ---------------- | --------------- |
-| 1.1     | March 10, 2021   | Update comment  |
-| 1.0     | January 29, 2021 | Initial release |
+| Version | Date          | Comments                                      |
+| ------- | ------------- | --------------------------------------------- |
+| 1.1     | May 04, 2026  | Applied SPFx code standardization (RTK, PnP)  |
+| 1.0     | May 04, 2026  | Initial release                               |
 
 ## Disclaimer
 
