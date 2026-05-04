@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "roca-transit-breakage-client-side-solution",
+    "id": "aaa0fb0b-9b9d-4c10-b5d7-b7285d2fdefd",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.22.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "roca-transit-breakage description"
+      },
+      "longDescription": {
+        "default": "roca-transit-breakage description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "roca-transit-breakage Feature",
+        "description": "The feature that activates elements of the roca-transit-breakage solution.",
+        "id": "ba7b2e2f-c801-4428-b923-e25e79b6ad16",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/roca-transit-breakage.sppkg"
+  }
+}
