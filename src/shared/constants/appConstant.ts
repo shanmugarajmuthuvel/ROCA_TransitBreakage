@@ -20,10 +20,103 @@ export const NAV_CONFIG: INavGroup[] = [
         ],
     },
     {
+        key: "Application Menu",
+        label: "Application Menu",
+        icon: "fileEdit",
+        allowedRoles: ["Initiator"],
+        items: [
+            {
+                key: "New Breakage Claim",
+                label: "New Breakage Claim",
+                icon: "submittedDeclarations",
+            },
+            { key: "All Request", label: "All Request", icon: "itCalculator" },
+            { key: "Rework Request", label: "Rework Request", icon: "itCalculator" },
+
+        ],
+    },
+    {
+        key: "Application Menu",
+        label: "Application Menu",
+        icon: "fileEdit",
+        allowedRoles: ["LogisticManager"],
+        items: [
+            {
+                key: "All Request",
+                label: "All Request",
+                icon: "submittedD",
+            },
+            { key: "Pending Approval", label: "Pending Approval", icon: "itCalculator" },
+            { key: "Process Approval", label: "Process Approval", icon: "itCalculator" },
+
+        ],
+    },
+    {
+        key: "Application Menu",
+        label: "Application Menu",
+        icon: "fileEdit",
+        allowedRoles: ["InsuranceChecker"],
+        items: [
+            {
+                key: "All Request",
+                label: "All Request",
+                icon: "submittedD",
+            },
+            {
+                key: "Awaiting for Approval",
+                label: "Awaiting for Approval",
+                icon: "submittedD",
+            },
+            { key: "Monthly Summary Claim Form", label: "Monthly Summary Claim Form", icon: "itCalculator" },
+            { key: "All Summary Claims", label: "All Summary Claims", icon: "itCalculator" },
+
+        ],
+    },
+    {
+        key: "Application Menu",
+        label: "Application Menu",
+        icon: "fileEdit",
+        allowedRoles: ["TaxationHead"],
+        items: [
+            {
+                key: "Awaiting Approval",
+                label: "Awaiting Approval",
+                icon: "submittedD",
+            },
+            {
+                key: "All Summary Claims",
+                label: "All Summary Claims",
+                icon: "submittedD",
+            }
+
+
+        ],
+    },
+    {
+        key: "Application Menu",
+        label: "Application Menu",
+        icon: "fileEdit",
+        allowedRoles: ["StockWriteOff"],
+        items: [
+            {
+                key: "Awaiting Approval",
+                label: "Awaiting Approval",
+                icon: "submittedD",
+            },
+            {
+                key: "All Summary Claims",
+                label: "All Summary Claims",
+                icon: "submittedD",
+            }
+
+
+        ],
+    },
+    {
         key: "BreakageReports",
         label: "BreakageReports",
         icon: "administration",
-        allowedRoles: ["Admin"],
+        allowedRoles: ["Initiator", "InsuranceChecker", "TaxationHead", "StockWriteOff"],
         items: [
             {
                 key: "employeeDeclaration",

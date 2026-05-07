@@ -1,7 +1,7 @@
 /**
  * Application roles that control which navigation items are visible.
  */
-export type AppRole = "Admin" | "Initiator" | "LogisticsManager" | "InsuranceChecker" | "TaxationHead" | "StockWriteOff";
+export type AppRole = "Admin" | "Initiator" | "LogisticManager" | "InsuranceChecker" | "TaxationHead" | "StockWriteOff";
 
 /**
  * A single navigation leaf item.
