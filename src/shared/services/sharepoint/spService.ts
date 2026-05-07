@@ -7,6 +7,7 @@ import "@pnp/sp/items";
 import "@pnp/sp/site-users/web";
 import "@pnp/sp/files";
 import "@pnp/sp/folders";
+import { deploymentConfig, LIST_NAMES } from '../../constants/appConstant';
 let _ctx: WebPartContext;
 let sp: SPFI;
 export const initPnP = (context: WebPartContext): void => {
@@ -226,6 +227,31 @@ export const getLibraryFilesWithMetadata = async (
             .top(5000)();
     } catch (err) {
         // await handleError(err, `Fetching files with metadata from ${libraryName}`);
+        return [];
+    }
+};
+export const getEmployeeMasterUsers = async (
+    currentSiteUrl: string,
+): Promise<any[]> => {
+    try {
+        if (!_ctx) {
+            throw new Error("PnP context not initialised. Call initPnP() first.");
+        }
+        const masterSiteUrl = deploymentConfig(currentSiteUrl);
+        const remoteSp = masterSiteUrl
+            ? spfi(masterSiteUrl).using(SPFx(_ctx))
+            : getSP();
+        const items: any[] = await remoteSp.web.lists
+            .getByTitle(LIST_NAMES.APPROVER_MASTERS)
+            .items
+            .select("*", "Role/Title", "Users/Title", "Users/EMail", "Users/Id", "System/Title")
+            .expand("Role", "Users", "System")
+            .top(5000)();
+
+        return items;
+    } catch (err) {
+        console.log(err)
+
         return [];
     }
 };

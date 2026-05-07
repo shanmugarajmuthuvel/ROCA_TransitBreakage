@@ -12,6 +12,8 @@ import {
   type IPropertyPaneConfiguration,
   PropertyPaneTextField
 } from '@microsoft/sp-property-pane';
+import store from "./store/Store";
+import { Provider } from "react-redux";
 export interface ITransitBreakageWebPartProps {
   description: string;
 }
@@ -30,7 +32,13 @@ export default class TransitBreakageWebPart extends BaseClientSideWebPart<ITrans
         context: this.context
       }
     );
-    ReactDom.render(element, this.domElement);
+    const wrapper = React.createElement(
+      Provider as any,
+      { store: store },
+      element
+    );
+    ReactDom.render(wrapper, this.domElement);
+
   }
   protected onInit(): Promise<void> {
     return super.onInit().then(_ => {

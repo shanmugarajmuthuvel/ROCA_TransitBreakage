@@ -37,7 +37,6 @@ const InputField: React.FC<IInputFieldProps> = ({
   ...rest
 }) => {
   const hasError = Boolean(errorMessage);
-
   return (
     <div className={`${styles.inputFieldContainer} ${className || ""}`}>
       {label && (
