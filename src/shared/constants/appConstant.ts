@@ -1,7 +1,6 @@
 import { INavGroup } from "../models/IAppRole";
 export const LIST_NAMES = {
     APPROVER_MASTERS: "ApproversMaster",
-
 } as const;
 export const NAV_CONFIG: INavGroup[] = [
     {
